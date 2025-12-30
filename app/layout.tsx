@@ -1,0 +1,46 @@
+import type { Metadata } from "next";
+import { Playfair_Display, Inter } from "next/font/google";
+import "./globals.css";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
+import PageTransition from "@/components/PageTransition";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "Amrash Ali - Social Worker & Community Advocate",
+  description: "Dedicated to empowering communities, promoting sustainability, and creating positive social change through grassroots engagement.",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en" className="scroll-smooth">
+      <body
+        className={`${inter.variable} ${playfair.variable} font-sans antialiased`}
+      >
+        <Navigation />
+        <PageTransition>
+          <main className="min-h-screen pt-16 md:pt-20">{children}</main>
+        </PageTransition>
+        <Footer />
+        <BackToTop />
+      </body>
+    </html>
+  );
+}
+

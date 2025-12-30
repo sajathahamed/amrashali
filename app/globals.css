@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-text-light dark:bg-background-dark dark:text-text-dark;
+    font-feature-settings: "kern" 1, "liga" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+    font-feature-settings: "kern" 1, "liga" 1;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Large screen optimizations */
+@media (min-width: 1920px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@layer components {
+  .prose {
+    @apply max-w-none;
+  }
+
+  .prose h2 {
+    @apply text-2xl sm:text-3xl font-serif text-primary mt-8 sm:mt-12 mb-4 sm:mb-6;
+  }
+
+  .prose h3 {
+    @apply text-xl sm:text-2xl font-serif text-primary mt-6 sm:mt-8 mb-3 sm:mb-4;
+  }
+
+  .prose p {
+    @apply text-base sm:text-lg leading-relaxed mb-4 sm:mb-6 text-text-light;
+  }
+
+  .prose a {
+    @apply text-accent hover:text-accent-dark underline;
+  }
+
+  .prose strong {
+    @apply font-semibold text-text-light;
+  }
+
+  .prose ul,
+  .prose ol {
+    @apply mb-6 pl-6;
+  }
+
+  .prose li {
+    @apply mb-2 text-lg leading-relaxed;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-accent pl-6 italic my-8 text-xl;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 lg:px-8 lg:py-4 rounded-md font-medium hover:bg-primary-dark transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transform hover:scale-105 active:scale-100;
+  }
+
+  .btn-secondary {
+    @apply bg-accent text-white px-6 py-3 lg:px-8 lg:py-4 rounded-md font-medium hover:bg-accent-dark transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 transform hover:scale-105 active:scale-100;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300;
+  }
+
+  .card-hover {
+    @apply transform hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+

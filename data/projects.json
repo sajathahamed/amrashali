@@ -1,0 +1,51 @@
+[
+  {
+    "id": "1",
+    "title": "The Water Crisis Investigation",
+    "slug": "water-crisis-investigation",
+    "date": "2024-11-15",
+    "category": "Investigative",
+    "tags": ["Water", "Environment", "Infrastructure"],
+    "excerpt": "A year-long investigation into water infrastructure failures across the United States, revealing systemic neglect and its impact on communities.",
+    "heroImage": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200&h=600&fit=crop",
+    "featured": true,
+    "content": "This comprehensive investigation examined water infrastructure failures in over 50 cities across the United States. Through extensive data analysis, interviews with hundreds of residents and officials, and on-the-ground reporting, the project revealed a pattern of systemic neglect that has left millions without reliable access to clean water.\n\n## The Investigation\n\nOver 12 months, I traveled to communities from Flint, Michigan to Jackson, Mississippi, documenting the human cost of infrastructure failure. The investigation combined data journalism, narrative storytelling, and multimedia elements to tell a complete story.\n\n## Key Findings\n\n- Over 2,000 water systems violate safety standards annually\n- Disadvantaged communities are disproportionately affected\n- Federal funding for water infrastructure has declined by 75% since 1977\n- The cost of fixing America's water infrastructure exceeds $1 trillion\n\n## Impact\n\nThe investigation led to congressional hearings, increased federal funding for water infrastructure, and policy changes in multiple states. It also won the Pulitzer Prize for Investigative Reporting.\n\n## Methodology\n\nThis project required extensive FOIA requests, data analysis, and relationship-building with sources across the country. The reporting process involved collaboration with data journalists, photographers, and videographers to create a comprehensive multimedia experience."
+  },
+  {
+    "id": "2",
+    "title": "Border Stories: Voices from the Edge",
+    "slug": "border-stories-voices-edge",
+    "date": "2024-10-20",
+    "category": "Narrative",
+    "tags": ["Immigration", "Border", "Human Rights"],
+    "excerpt": "A multimedia narrative project documenting the lives of people living along the U.S.-Mexico border, challenging stereotypes and revealing complex realities.",
+    "heroImage": "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=1200&h=600&fit=crop",
+    "featured": true,
+    "content": "Border Stories is a long-form narrative journalism project that tells the stories of people living along the U.S.-Mexico border. Through photography, video, audio, and written narrative, the project challenges simplistic narratives about border communities.\n\n## The Approach\n\nRather than focusing on policy debates, this project centered on human stories. I spent six months living in border communities, building relationships, and documenting daily life.\n\n## The Stories\n\nThe project features 12 in-depth profiles of individuals and families, each representing different aspects of border life: business owners, activists, migrants, border patrol agents, and long-time residents.\n\n## The Medium\n\nEach story combines written narrative with original photography, audio interviews, and interactive maps. The multimedia approach allows readers to experience the border in a more immersive way.\n\n## Reception\n\nThe project was featured in major publications and won multiple awards for narrative journalism and multimedia storytelling. It has been used in university courses and community discussions about immigration policy."
+  },
+  {
+    "id": "3",
+    "title": "The Algorithm Audit",
+    "slug": "algorithm-audit",
+    "date": "2024-09-10",
+    "category": "Data Journalism",
+    "tags": ["Technology", "AI", "Accountability"],
+    "excerpt": "A data-driven investigation into algorithmic bias in hiring, lending, and criminal justice systems, using public records and computational analysis.",
+    "heroImage": "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=1200&h=600&fit=crop",
+    "featured": false,
+    "content": "The Algorithm Audit is a data journalism project that investigates how algorithms used in hiring, lending, and criminal justice systems perpetuate bias and discrimination. Using computational methods and public records, the project reveals patterns that would be invisible through traditional reporting.\n\n## The Methodology\n\nThis project required collaboration with data scientists and computer scientists to analyze algorithms and their outputs. We used public records requests, reverse engineering, and statistical analysis to understand how these systems work.\n\n## Key Discoveries\n\n- Hiring algorithms systematically disadvantage candidates from certain demographic groups\n- Lending algorithms charge higher rates to borrowers in minority neighborhoods, even controlling for credit scores\n- Risk assessment tools used in criminal justice show significant racial bias\n\n## The Tools\n\nThe project includes interactive visualizations that allow readers to explore the data themselves. We also created a database of algorithmic systems used in public decision-making.\n\n## Impact\n\nThe investigation led to regulatory scrutiny of several algorithmic systems and changes in how some companies use AI in hiring and lending decisions."
+  },
+  {
+    "id": "4",
+    "title": "Climate Refugees: The Uncounted",
+    "slug": "climate-refugees-uncounted",
+    "date": "2024-08-05",
+    "category": "Global Reporting",
+    "tags": ["Climate", "Migration", "Global"],
+    "excerpt": "An international reporting project documenting climate displacement across three continents, following families forced to migrate due to environmental change.",
+    "heroImage": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&h=600&fit=crop",
+    "featured": true,
+    "content": "Climate Refugees: The Uncounted is an international reporting project that documents the growing phenomenon of climate displacement. Over 18 months, I followed families in Bangladesh, the Pacific Islands, and Central America as they were forced to leave their homes due to climate change.\n\n## The Scope\n\nThe project spans three continents and documents different types of climate displacement: sea-level rise, drought, and extreme weather events. Each story is told through the lens of individual families.\n\n## The Reporting\n\nThis project required extensive travel, language interpretation, and building trust with communities facing displacement. The reporting process involved months of relationship-building before beginning formal interviews.\n\n## The Stories\n\nEach family's story is told through multiple formats: written narrative, photography, video diaries, and interactive maps showing their migration journey.\n\n## The Impact\n\nThe project has been used in international climate negotiations and has influenced how organizations track and respond to climate displacement. It has also been featured in major international publications and won awards for global reporting."
+  }
+]
+
