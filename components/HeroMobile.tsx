@@ -127,7 +127,7 @@ export default function HeroMobile() {
               <div className="absolute inset-[2px] rounded-full overflow-hidden bg-background">
                 <Image
                   src="/amrash pic/profile-removebg-preview.png"
-                  alt="Amrash Ali"
+                  alt="Amras Ali"
                   fill
                   className="object-contain p-2"
                   priority
@@ -146,7 +146,7 @@ export default function HeroMobile() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary leading-tight"
             >
-              <AnimatedText text="Amrash Ali" delay={0.5} />
+              <AnimatedText text="Amras Ali" delay={0.5} />
             </motion.h1>
 
             {/* Role line */}
@@ -256,6 +256,7 @@ export default function HeroMobile() {
     </section>
   );
 }
+
 
 
 

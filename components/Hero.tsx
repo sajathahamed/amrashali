@@ -151,7 +151,7 @@ export default function Hero() {
                 Welcome
               </motion.p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-serif font-bold text-primary leading-[1.1] sm:leading-[0.95] tracking-tight">
-                <AnimatedText text="Amrash Ali" delay={0.6} />
+                <AnimatedText text="Amras Ali" delay={0.6} />
                 <br className="hidden sm:block" />
                 <motion.span
                   initial={{ opacity: 0 }}
@@ -221,7 +221,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent z-10" />
             <Image
               src="/amrash pic/profile-removebg-preview.png"
-              alt="Amrash Ali"
+              alt="Amras Ali"
               fill
               className="object-contain p-4 sm:p-6 md:p-8 transition-transform duration-700 group-hover:scale-110"
               priority

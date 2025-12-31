@@ -116,7 +116,7 @@ export default function Navigation() {
               AA
             </span>
             <span className="hidden sm:inline text-sm text-text">
-              Amrash Ali
+              Amras Ali
             </span>
           </Link>
 
@@ -406,7 +406,7 @@ export default function Navigation() {
                   className="text-center"
                 >
                   <p className="text-sm text-text/60">
-                    Amrash Ali
+                    Amras Ali
                   </p>
                 </motion.div>
               </nav>

@@ -119,7 +119,7 @@ export default function AboutPage() {
             >
               <Image
                 src="/amrash pic/profile-removebg-preview.png"
-                alt="Amrash Ali"
+                alt="Amras Ali"
                 fill
                 className="object-contain p-4 sm:p-6 md:p-8 transition-transform duration-700 group-hover:scale-110"
                 priority

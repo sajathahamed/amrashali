@@ -19,7 +19,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Amrash Ali - Social Worker & Community Advocate",
+  title: "Amras Ali - Social Worker & Community Advocate",
   description: "Dedicated to empowering communities, promoting sustainability, and creating positive social change through grassroots engagement.",
 };
 
