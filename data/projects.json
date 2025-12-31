@@ -1,51 +1,79 @@
 [
+  
   {
-    "id": "1",
-    "title": "The Water Crisis Investigation",
-    "slug": "water-crisis-investigation",
+    "id": "5",
+    "title": "Community Development Initiative",
+    "slug": "community-development-initiative",
+    "date": "2024-12-01",
+    "category": "Community Work",
+    "tags": ["Community Development", "Sustainability", "Empowerment"],
+    "excerpt": "A comprehensive community development project focusing on sustainable practices and local empowerment.",
+    "heroImage": "/amrash pic/projects/p1/WhatsApp Image 2025-12-31 at 18.18.59.jpeg",
+    "featured": true,
+    "content": "This comprehensive community development project focuses on sustainable practices and local empowerment. Through grassroots engagement and participatory approaches, the initiative works directly with communities to identify needs, develop solutions, and create lasting positive change.\n\n## Project Overview\n\nThe Community Development Initiative addresses multiple aspects of community well-being, including economic development, social cohesion, and environmental sustainability. The project emphasizes local ownership and capacity building.\n\n## Key Activities\n\n- Community needs assessment and participatory planning\n- Skills training and capacity building workshops\n- Sustainable livelihood development programs\n- Community infrastructure improvements\n- Environmental conservation activities\n\n## Impact\n\nThe initiative has successfully engaged multiple communities, creating sustainable development models that can be replicated in other areas. The project has strengthened community bonds and improved local capacity for self-governance and development.",
+    "images": [
+      "/amrash pic/projects/p1/WhatsApp Image 2025-12-31 at 18.18.59 (1).jpeg",
+      "/amrash pic/projects/p1/WhatsApp Image 2025-12-31 at 18.18.59.jpeg",
+      "/amrash pic/projects/p1/WhatsApp Image 2025-12-31 at 18.19.00.jpeg",
+      "/amrash pic/projects/p1/WhatsApp Image 2025-12-31 at 18.19.01 (1).jpeg",
+      "/amrash pic/projects/p1/WhatsApp Image 2025-12-31 at 18.19.01.jpeg"
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Social Welfare Program",
+    "slug": "social-welfare-program",
     "date": "2024-11-15",
-    "category": "Investigative",
-    "tags": ["Water", "Environment", "Infrastructure"],
-    "excerpt": "A year-long investigation into water infrastructure failures across the United States, revealing systemic neglect and its impact on communities.",
-    "heroImage": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200&h=600&fit=crop",
+    "category": "Social Work",
+    "tags": ["Social Welfare", "Community Support", "Advocacy"],
+    "excerpt": "An initiative aimed at improving social welfare and community support systems.",
+    "heroImage": "/amrash pic/projects/p2/WhatsApp Image 2025-12-31 at 18.22.15.jpeg",
     "featured": true,
-    "content": "This comprehensive investigation examined water infrastructure failures in over 50 cities across the United States. Through extensive data analysis, interviews with hundreds of residents and officials, and on-the-ground reporting, the project revealed a pattern of systemic neglect that has left millions without reliable access to clean water.\n\n## The Investigation\n\nOver 12 months, I traveled to communities from Flint, Michigan to Jackson, Mississippi, documenting the human cost of infrastructure failure. The investigation combined data journalism, narrative storytelling, and multimedia elements to tell a complete story.\n\n## Key Findings\n\n- Over 2,000 water systems violate safety standards annually\n- Disadvantaged communities are disproportionately affected\n- Federal funding for water infrastructure has declined by 75% since 1977\n- The cost of fixing America's water infrastructure exceeds $1 trillion\n\n## Impact\n\nThe investigation led to congressional hearings, increased federal funding for water infrastructure, and policy changes in multiple states. It also won the Pulitzer Prize for Investigative Reporting.\n\n## Methodology\n\nThis project required extensive FOIA requests, data analysis, and relationship-building with sources across the country. The reporting process involved collaboration with data journalists, photographers, and videographers to create a comprehensive multimedia experience."
+    "content": "The Social Welfare Program is a comprehensive initiative designed to improve social welfare and community support systems. The program addresses critical social needs through direct service delivery, advocacy, and system-level interventions.\n\n## Program Components\n\nThe program includes multiple components working together to create a holistic support system for community members in need.\n\n## Services Provided\n\n- Direct assistance to individuals and families in crisis\n- Case management and referral services\n- Community resource development\n- Advocacy for policy changes\n- Training for community volunteers\n\n## Outcomes\n\nThe program has successfully supported hundreds of individuals and families, connecting them with necessary resources and services. It has also strengthened the overall social support infrastructure in the communities served.",
+    "images": [
+      "/amrash pic/projects/p2/WhatsApp Image 2025-12-31 at 18.22.15 (1).jpeg",
+      "/amrash pic/projects/p2/WhatsApp Image 2025-12-31 at 18.22.15 (2).jpeg",
+      "/amrash pic/projects/p2/WhatsApp Image 2025-12-31 at 18.22.15.jpeg",
+      "/amrash pic/projects/p2/WhatsApp Image 2025-12-31 at 18.22.16 (1).jpeg",
+      "/amrash pic/projects/p2/WhatsApp Image 2025-12-31 at 18.22.16.jpeg"
+    ]
   },
   {
-    "id": "2",
-    "title": "Border Stories: Voices from the Edge",
-    "slug": "border-stories-voices-edge",
+    "id": "7",
+    "title": "Environmental Conservation Project",
+    "slug": "environmental-conservation-project",
     "date": "2024-10-20",
-    "category": "Narrative",
-    "tags": ["Immigration", "Border", "Human Rights"],
-    "excerpt": "A multimedia narrative project documenting the lives of people living along the U.S.-Mexico border, challenging stereotypes and revealing complex realities.",
-    "heroImage": "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=1200&h=600&fit=crop",
+    "category": "Environmental",
+    "tags": ["Conservation", "Sustainability", "Environment"],
+    "excerpt": "A project focused on environmental conservation and sustainable development practices.",
+    "heroImage": "/amrash pic/projects/p3/WhatsApp Image 2025-12-31 at 18.22.42.jpeg",
     "featured": true,
-    "content": "Border Stories is a long-form narrative journalism project that tells the stories of people living along the U.S.-Mexico border. Through photography, video, audio, and written narrative, the project challenges simplistic narratives about border communities.\n\n## The Approach\n\nRather than focusing on policy debates, this project centered on human stories. I spent six months living in border communities, building relationships, and documenting daily life.\n\n## The Stories\n\nThe project features 12 in-depth profiles of individuals and families, each representing different aspects of border life: business owners, activists, migrants, border patrol agents, and long-time residents.\n\n## The Medium\n\nEach story combines written narrative with original photography, audio interviews, and interactive maps. The multimedia approach allows readers to experience the border in a more immersive way.\n\n## Reception\n\nThe project was featured in major publications and won multiple awards for narrative journalism and multimedia storytelling. It has been used in university courses and community discussions about immigration policy."
+    "content": "The Environmental Conservation Project focuses on environmental conservation and sustainable development practices. This initiative works with communities to protect natural resources while promoting sustainable livelihoods.\n\n## Conservation Activities\n\nThe project implements various conservation activities designed to protect local ecosystems and biodiversity.\n\n## Key Initiatives\n\n- Reforestation and tree planting programs\n- Waste management and recycling initiatives\n- Water conservation and protection\n- Biodiversity protection programs\n- Environmental education and awareness\n\n## Community Engagement\n\nCommunity members are actively involved in all aspects of the project, from planning to implementation. This participatory approach ensures long-term sustainability and local ownership of conservation efforts.\n\n## Results\n\nThe project has successfully protected significant areas of natural habitat, improved local environmental conditions, and increased community awareness and engagement in conservation activities.",
+    "images": [
+      "/amrash pic/projects/p3/WhatsApp Image 2025-12-31 at 18.22.42 (1).jpeg",
+      "/amrash pic/projects/p3/WhatsApp Image 2025-12-31 at 18.22.42 (2).jpeg",
+      "/amrash pic/projects/p3/WhatsApp Image 2025-12-31 at 18.22.42.jpeg",
+      "/amrash pic/projects/p3/WhatsApp Image 2025-12-31 at 18.22.43.jpeg"
+    ]
   },
   {
-    "id": "3",
-    "title": "The Algorithm Audit",
-    "slug": "algorithm-audit",
+    "id": "8",
+    "title": "Community Engagement Initiative",
+    "slug": "community-engagement-initiative",
     "date": "2024-09-10",
-    "category": "Data Journalism",
-    "tags": ["Technology", "AI", "Accountability"],
-    "excerpt": "A data-driven investigation into algorithmic bias in hiring, lending, and criminal justice systems, using public records and computational analysis.",
-    "heroImage": "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=1200&h=600&fit=crop",
+    "category": "Community Work",
+    "tags": ["Community Engagement", "Participation", "Development"],
+    "excerpt": "An initiative promoting active community engagement and participatory development.",
+    "heroImage": "/amrash pic/projects/p4/WhatsApp Image 2025-12-31 at 18.23.17.jpeg",
     "featured": false,
-    "content": "The Algorithm Audit is a data journalism project that investigates how algorithms used in hiring, lending, and criminal justice systems perpetuate bias and discrimination. Using computational methods and public records, the project reveals patterns that would be invisible through traditional reporting.\n\n## The Methodology\n\nThis project required collaboration with data scientists and computer scientists to analyze algorithms and their outputs. We used public records requests, reverse engineering, and statistical analysis to understand how these systems work.\n\n## Key Discoveries\n\n- Hiring algorithms systematically disadvantage candidates from certain demographic groups\n- Lending algorithms charge higher rates to borrowers in minority neighborhoods, even controlling for credit scores\n- Risk assessment tools used in criminal justice show significant racial bias\n\n## The Tools\n\nThe project includes interactive visualizations that allow readers to explore the data themselves. We also created a database of algorithmic systems used in public decision-making.\n\n## Impact\n\nThe investigation led to regulatory scrutiny of several algorithmic systems and changes in how some companies use AI in hiring and lending decisions."
-  },
-  {
-    "id": "4",
-    "title": "Climate Refugees: The Uncounted",
-    "slug": "climate-refugees-uncounted",
-    "date": "2024-08-05",
-    "category": "Global Reporting",
-    "tags": ["Climate", "Migration", "Global"],
-    "excerpt": "An international reporting project documenting climate displacement across three continents, following families forced to migrate due to environmental change.",
-    "heroImage": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&h=600&fit=crop",
-    "featured": true,
-    "content": "Climate Refugees: The Uncounted is an international reporting project that documents the growing phenomenon of climate displacement. Over 18 months, I followed families in Bangladesh, the Pacific Islands, and Central America as they were forced to leave their homes due to climate change.\n\n## The Scope\n\nThe project spans three continents and documents different types of climate displacement: sea-level rise, drought, and extreme weather events. Each story is told through the lens of individual families.\n\n## The Reporting\n\nThis project required extensive travel, language interpretation, and building trust with communities facing displacement. The reporting process involved months of relationship-building before beginning formal interviews.\n\n## The Stories\n\nEach family's story is told through multiple formats: written narrative, photography, video diaries, and interactive maps showing their migration journey.\n\n## The Impact\n\nThe project has been used in international climate negotiations and has influenced how organizations track and respond to climate displacement. It has also been featured in major international publications and won awards for global reporting."
+    "content": "The Community Engagement Initiative promotes active community engagement and participatory development. This project creates platforms for community members to voice their concerns, participate in decision-making, and take ownership of development processes.\n\n## Engagement Methods\n\nThe initiative uses various methods to engage community members and ensure their voices are heard.\n\n## Activities\n\n- Community meetings and forums\n- Participatory planning workshops\n- Community-led project implementation\n- Capacity building for community leaders\n- Documentation and knowledge sharing\n\n## Impact\n\nThe initiative has successfully increased community participation in development processes, leading to more responsive and effective programs. Community members report feeling more empowered and engaged in shaping their own futures.",
+    "images": [
+      "/amrash pic/projects/p4/WhatsApp Image 2025-12-31 at 18.23.17.jpeg",
+      "/amrash pic/projects/p4/WhatsApp Image 2025-12-31 at 18.23.18 (1).jpeg",
+      "/amrash pic/projects/p4/WhatsApp Image 2025-12-31 at 18.23.18.jpeg",
+      "/amrash pic/projects/p4/WhatsApp Image 2025-12-31 at 18.23.19.jpeg",
+      "/amrash pic/projects/p4/WhatsApp Image 2025-12-31 at 18.23.20.jpeg"
+    ]
   }
 ]
 

@@ -1,6 +1,7 @@
 import journalData from "@/data/journal.json";
 import projectsData from "@/data/projects.json";
 import servicesData from "@/data/services.json";
+import cvData from "@/data/cv.json";
 
 export interface Article {
   id: string;
@@ -28,6 +29,7 @@ export interface Project {
   heroImage: string;
   featured: boolean;
   content: string;
+  images?: string[];
 }
 
 export interface Service {
@@ -81,5 +83,65 @@ export function getTags(): string[] {
     article.tags.forEach((tag) => tags.add(tag));
   });
   return Array.from(tags).sort();
+}
+
+// CV Data Types
+export interface Education {
+  id: string;
+  degree: string;
+  institution: string;
+  period: string;
+  description: string;
+}
+
+export interface Experience {
+  id: string;
+  title: string;
+  organization: string;
+  period: string;
+  responsibilities: string[];
+}
+
+export interface CommunityWork {
+  id: string;
+  title: string;
+  organization: string;
+  period: string;
+  description: string;
+}
+
+export interface Skill {
+  name: string;
+  level: number;
+}
+
+export interface Language {
+  name: string;
+  proficiency: number;
+}
+
+export interface Certification {
+  id: string;
+  title: string;
+  issuer: string;
+  year: string;
+}
+
+export interface CVData {
+  contact: {
+    phone: string;
+    email: string;
+    address: string;
+  };
+  languages: Language[];
+  education: Education[];
+  experience: Experience[];
+  communityWork: CommunityWork[];
+  skills: Skill[];
+  certifications: Certification[];
+}
+
+export function getCVData(): CVData {
+  return cvData as CVData;
 }
 

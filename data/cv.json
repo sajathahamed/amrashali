@@ -1,0 +1,146 @@
+{
+  "contact": {
+    "phone": "+94 74 115 46 96",
+    "email": "amrasali678@gmail.com",
+    "address": "210A, Hisbullah road, Semmenodai, Valaichennai"
+  },
+  "languages": [
+    { "name": "Tamil", "proficiency": 100 },
+    { "name": "English", "proficiency": 85 },
+    { "name": "Sinhala", "proficiency": 75 }
+  ],
+  "education": [
+    {
+      "id": "1",
+      "degree": "Bachelor of Social Work",
+      "institution": "National Institute Of Social Development",
+      "period": "2021 - 2025",
+      "description": "Comprehensive study of social work principles, community development, and social justice."
+    },
+    {
+      "id": "2",
+      "degree": "AAT Intermediate",
+      "institution": "AAT Sri Lanka",
+      "period": "2018 - 2020",
+      "description": "Accounting and finance fundamentals."
+    },
+    {
+      "id": "3",
+      "degree": "ICT Technician (NVQ - 4)",
+      "institution": "NVTI - Vantharumoolai",
+      "period": "2020 - 2021",
+      "description": "Technical skills in information and communication technology."
+    },
+    {
+      "id": "4",
+      "degree": "Secondary School",
+      "institution": "BT/BC/ Oddamavadi Central College",
+      "period": "2017 - 2020",
+      "description": "Completed secondary education with focus on social sciences."
+    }
+  ],
+  "experience": [
+    {
+      "id": "1",
+      "title": "Project Coordinator",
+      "organization": "Resilience Research, Training & Consulting",
+      "period": "March 2022 - April 2025",
+      "responsibilities": [
+        "Administrating project works and ensuring timely delivery",
+        "Building logic for ad-serving platforms",
+        "Managing educational institutions and online classrooms",
+        "Coordinating with stakeholders and team members"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Social Media Coordinator",
+      "organization": "Resilience Research, Training & Consulting (WE - LED Project)",
+      "period": "April 2023 - October 2024",
+      "responsibilities": [
+        "Researching audience preferences and trends",
+        "Overseeing social media campaigns and content strategy",
+        "Developing engaging content for multiple platforms",
+        "Analyzing social media metrics and performance"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Research Assistant",
+      "organization": "UNDP",
+      "period": "January 2023 - July 2023",
+      "responsibilities": [
+        "Implementing monitoring systems and data collection",
+        "Designing research tools and methodologies",
+        "Supporting primary data collection in field settings",
+        "Analyzing data and preparing reports"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Field Investigation Officer",
+      "organization": "MARGA Research Institute",
+      "period": "July 2023 - January 2025",
+      "responsibilities": [
+        "Conducting field investigations and inspections",
+        "Gathering facts and determining conformance to regulations",
+        "Identifying hazards and compliance issues",
+        "Preparing detailed investigation reports"
+      ]
+    }
+  ],
+  "communityWork": [
+    {
+      "id": "1",
+      "title": "Founder",
+      "organization": "Little Food Cabinet Moment Sri - Lanka",
+      "period": "2021 - Present",
+      "description": "Founded an initiative to combat poverty and hunger by providing accessible, non-perishable food items in community hubs. The program emphasizes community support, self-sufficiency, and strengthening community bonds to offer long-term solutions to poverty and hunger."
+    },
+    {
+      "id": "2",
+      "title": "Editorial Director",
+      "organization": "AB Journal",
+      "period": "2024 - Present",
+      "description": "Leading a publication dedicated to raising awareness about human rights violations worldwide through investigative reporting. The journal highlights cases of injustice, provides a platform for marginalized voices, and ensures stories of oppression are not overlooked, fostering accountability and inspiring action."
+    },
+    {
+      "id": "3",
+      "title": "Provincial Coordinator",
+      "organization": "Sri Lanka Greens - Eastern Province",
+      "period": "2023 - Present",
+      "description": "Leading environmental initiatives focused on sustainability and conservation. Coordinating projects addressing deforestation, pollution, and climate change, working with local communities, government bodies, and NGOs to implement green practices, raise awareness, and advocate for policy changes."
+    },
+    {
+      "id": "4",
+      "title": "Member",
+      "organization": "Jana Sabha",
+      "period": "2023 - Present",
+      "description": "Representing and addressing community needs and concerns. Jana Sabha is a grassroots platform for civic engagement, collaborating to identify and solve local issues from infrastructure to social welfare. Ensuring transparent governance and advocating for residents' rights and interests."
+    }
+  ],
+  "skills": [
+    { "name": "Project Management", "level": 90 },
+    { "name": "Social Media Management", "level": 85 },
+    { "name": "Research & Data Analysis", "level": 88 },
+    { "name": "Community Development", "level": 92 },
+    { "name": "Field Investigation", "level": 87 },
+    { "name": "Content Creation", "level": 83 },
+    { "name": "Communication", "level": 95 },
+    { "name": "Leadership", "level": 88 }
+  ],
+  "certifications": [
+    {
+      "id": "1",
+      "title": "ICT Technician (NVQ - 4)",
+      "issuer": "NVTI - Vantharumoolai",
+      "year": "2021"
+    },
+    {
+      "id": "2",
+      "title": "AAT Intermediate",
+      "issuer": "AAT Sri Lanka",
+      "year": "2020"
+    }
+  ]
+}

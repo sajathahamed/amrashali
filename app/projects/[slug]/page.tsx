@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getProjectBySlug, getAllProjects } from "@/lib/data";
 import { formatDate } from "@/lib/utils";
 import ShareButtons from "@/components/ShareButtons";
+import ProjectGallery from "@/components/ProjectGallery";
 
 export async function generateStaticParams() {
   const projects = getAllProjects();
@@ -105,6 +106,14 @@ export default function ProjectPage({
             );
           })}
         </div>
+
+        {/* Image Gallery */}
+        {project.images && project.images.length > 1 && (
+          <ProjectGallery
+            images={project.images.slice(1)}
+            projectTitle={project.title}
+          />
+        )}
 
         {/* Share Buttons */}
         <div className="mt-12 pt-8 border-t border-gray-200">
