@@ -1,6 +1,6 @@
-# Journalist Portfolio & News Site
+# AB Journal — Community-driven Journal
 
-A production-ready, front-end-only journalist portfolio and news site built with Next.js 14+, TypeScript, Tailwind CSS, and Framer Motion.
+Public-facing site for AB Journal: a community-driven publication publishing investigative reporting, multimedia features, and first-person accounts.
 
 ## Features
 

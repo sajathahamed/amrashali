@@ -113,10 +113,10 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link href="/" className="flex items-center space-x-2">
             <span className="text-2xl font-serif font-bold text-primary">
-              AA
+              ABJ
             </span>
             <span className="hidden sm:inline text-sm text-text">
-              Amras Ali
+              AB Journal
             </span>
           </Link>
 
@@ -406,7 +406,7 @@ export default function Navigation() {
                   className="text-center"
                 >
                   <p className="text-sm text-text/60">
-                    Amras Ali
+                    AB Journal
                   </p>
                 </motion.div>
               </nav>

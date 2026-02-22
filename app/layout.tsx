@@ -19,8 +19,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Amras Ali - Social Worker & Community Advocate",
-  description: "Dedicated to empowering communities, promoting sustainability, and creating positive social change through grassroots engagement.",
+  title: "AB Journal - Community-driven Human Rights Reporting",
+  description: "AB Journal amplifies marginalized voices through investigative reporting, multimedia storytelling, and community journalism.",
 };
 
 export default function RootLayout({

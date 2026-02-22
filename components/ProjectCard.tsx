@@ -21,14 +21,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         ease: [0.22, 1, 0.36, 1],
       }}
       whileHover={{ y: -12, scale: 1.02 }}
-      className="card overflow-hidden h-full flex flex-col group cursor-pointer"
+        className="card overflow-hidden h-full flex flex-col group cursor-pointer transition-shadow duration-300 hover:shadow-2xl"
     >
       <Link href={`/projects/${project.slug}`} className="block h-full">
-        <div className="relative h-80 md:h-96 lg:h-[500px] w-full overflow-hidden">
+        <div className="relative h-56 sm:h-64 md:h-72 lg:h-80 xl:h-[420px] w-full overflow-hidden">
           <motion.div
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute inset-0"
+            className="absolute inset-0 transform-gpu transition-transform will-change-transform"
           >
             <Image
               src={project.heroImage}

@@ -151,7 +151,7 @@ export default function Hero() {
                 Welcome
               </motion.p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-serif font-bold text-primary leading-[1.1] sm:leading-[0.95] tracking-tight">
-                <AnimatedText text="Amras Ali" delay={0.6} />
+                <AnimatedText text="AB Journal" delay={0.6} />
                 <br className="hidden sm:block" />
                 <motion.span
                   initial={{ opacity: 0 }}
@@ -159,10 +159,10 @@ export default function Hero() {
                   transition={{ delay: 1.2, duration: 0.8 }}
                   className="text-accent block sm:inline"
                 >
-                  <AnimatedText text="Social Worker" delay={1.4} />
+                  <AnimatedText text="Community Journal" delay={1.4} />
                 </motion.span>
                 <br className="hidden sm:block" />
-                <AnimatedText text="Community Advocate" delay={2} />
+                <AnimatedText text="Human Rights Reporting" delay={2} />
               </h1>
             </motion.div>
 
@@ -173,13 +173,13 @@ export default function Hero() {
               className="space-y-3 sm:space-y-4"
             >
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-text-light leading-relaxed max-w-2xl font-light">
-                Dedicated to empowering communities, promoting sustainability,
-                and creating positive social change through grassroots engagement.
-              </p>
-              <p className="text-sm sm:text-base md:text-lg text-text leading-relaxed max-w-2xl">
-                Through field work, research, and community-centered approaches,
-                I bridge the gap between infrastructure and human need.
-              </p>
+                  AB Journal amplifies marginalized voices and publishes investigative
+                  reporting, first-person accounts, and multimedia stories from communities.
+                </p>
+                <p className="text-sm sm:text-base md:text-lg text-text leading-relaxed max-w-2xl">
+                  We collaborate with local reporters and community contributors to document
+                  human rights issues and support advocacy through rigorous journalism.
+                </p>
             </motion.div>
 
             <motion.div
@@ -220,8 +220,8 @@ export default function Hero() {
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent z-10" />
             <Image
-              src="/amrash pic/profile-removebg-preview.png"
-              alt="Amras Ali"
+              src="/ab-journal/abjournal.png"
+              alt="AB Journal"
               fill
               className="object-contain p-4 sm:p-6 md:p-8 transition-transform duration-700 group-hover:scale-110"
               priority

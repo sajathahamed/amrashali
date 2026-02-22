@@ -126,8 +126,8 @@ export default function HeroMobile() {
               {/* Profile Image */}
               <div className="absolute inset-[2px] rounded-full overflow-hidden bg-background">
                 <Image
-                  src="/amrash pic/profile-removebg-preview.png"
-                  alt="Amras Ali"
+                  src="/ab-journal/abjournal.png"
+                  alt="AB Journal"
                   fill
                   className="object-contain p-2"
                   priority
@@ -146,30 +146,30 @@ export default function HeroMobile() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary leading-tight"
             >
-              <AnimatedText text="Amras Ali" delay={0.5} />
+              <AnimatedText text="AB Journal" delay={0.5} />
             </motion.h1>
 
             {/* Role line */}
-            <motion.div
+              <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.9 }}
               className="flex items-center justify-center gap-2 text-sm sm:text-base md:text-lg text-text font-medium"
             >
-              <span>Journalist</span>
+              <span>Community Journalism</span>
               <span className="text-accent">•</span>
-              <span>Social Worker</span>
+              <span>Human Rights Reporting</span>
             </motion.div>
 
             {/* Mission statement */}
-            <motion.p
+              <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.2 }}
               className="text-base sm:text-lg md:text-xl text-text-light leading-relaxed max-w-sm mx-auto font-light px-2"
             >
-              Dedicated to empowering communities and creating positive social
-              change through grassroots engagement.
+              AB Journal amplifies community voices and publishes investigative
+              journalism that documents human rights issues and local struggles.
             </motion.p>
           </div>
 
@@ -189,7 +189,7 @@ export default function HeroMobile() {
                 href="/articles"
                 className="block w-full bg-primary text-white px-6 py-3.5 sm:py-4 rounded-lg font-medium text-base sm:text-lg text-center hover:bg-primary-dark transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 active:bg-primary-dark"
               >
-                View My Work
+                View Journal
               </Link>
             </motion.div>
 
@@ -202,7 +202,7 @@ export default function HeroMobile() {
                 href="/about"
                 className="block w-full border-2 border-primary text-primary px-6 py-3.5 sm:py-4 rounded-lg font-medium text-base sm:text-lg text-center hover:bg-primary hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 active:bg-primary active:text-white"
               >
-                Contact / Social
+                About the Journal
               </Link>
             </motion.div>
           </motion.div>
