@@ -132,9 +132,29 @@ main {
   visibility: visible !important;
 }
 
-/* Ensure all sections are visible - Chrome may not trigger intersection observer same as Edge */
+/* Chrome hydration fix for motion elements */
+[data-framer-component-type],
+[data-motion-component] {
+  opacity: 1;
+}
+
+/* Force visibility for hero sections - Chrome may delay opacity transitions */
 section {
   content-visibility: auto;
+  contain-intrinsic-size: auto 100vh;
+}
+
+/* Chrome-specific: ensure animated text is visible */
+h1, h2, h3, h4, h5, h6 {
+  opacity: 1;
+}
+
+/* Fix for Chrome not showing initial animation states properly */
+@supports (-webkit-appearance: none) {
+  [style*="transform"] {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
 }
 
 /* Reduced motion support */

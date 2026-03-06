@@ -48,7 +48,7 @@ const ScrollIndicator = () => {
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 2, duration: 0.6 }}
+      transition={{ delay: 2.2, duration: 0.6 }}
       className="absolute bottom-8 sm:bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 z-20"
     >
       <span className="text-xs sm:text-sm text-text/70 font-medium tracking-wider uppercase">
@@ -118,6 +118,7 @@ export default function Hero() {
     <section
       ref={containerRef}
       className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-background"
+      style={{ opacity: 1, visibility: 'visible' }} /* Chrome hydration fix */
     >
       {/* Background with gradient and noise texture */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5" />
@@ -132,6 +133,7 @@ export default function Hero() {
       <motion.div
         style={{ y, opacity, scale }}
         className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 sm:py-20"
+        initial={{ opacity: 1 }} /* Chrome: ensure visible on mount */
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-16 items-center">
           {/* Text Content */}
@@ -142,64 +144,61 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="space-y-3 sm:space-y-4"
             >
-              <motion.p
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                className="text-accent text-sm sm:text-base md:text-lg lg:text-xl font-medium tracking-wider uppercase"
-              >
-                Welcome
-              </motion.p>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-serif font-bold text-primary leading-[1.08] sm:leading-[1.02] tracking-tight">
-                <AnimatedText text="AB Journal" delay={0.6} />
-                <br className="hidden sm:block" />
-                <motion.span
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.2, duration: 0.8 }}
-                  className="text-accent block sm:inline"
-                >
-                  <AnimatedText text="Community Journal" delay={1.4} />
-                </motion.span>
-                <br className="hidden sm:block" />
-                <AnimatedText text="Human Rights Reporting" delay={2} />
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-serif font-bold text-primary leading-[1.05] tracking-tight">
+                <AnimatedText text="AB Journal" delay={0.4} />
               </h1>
+              
+              {/* Tagline on same line with separator - modern editorial style */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1, ease: [0.22, 1, 0.36, 1] }}
+                className="flex flex-wrap items-center gap-2 sm:gap-3 md:gap-4 mt-3 sm:mt-4"
+              >
+                <span className="text-accent text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-serif font-semibold">
+                  Community Journalism
+                </span>
+                <span className="text-accent text-xl sm:text-2xl md:text-3xl lg:text-4xl">•</span>
+                <span className="text-primary text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-serif font-semibold">
+                  Human Rights Reporting
+                </span>
+              </motion.div>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 2.5, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.8, delay: 1.4, ease: [0.22, 1, 0.36, 1] }}
               className="space-y-3 sm:space-y-4"
             >
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-text-light leading-relaxed max-w-2xl font-light">
-                  AB Journal amplifies marginalized voices and publishes investigative
-                  reporting, first-person accounts, and multimedia stories from communities.
-                </p>
-                <p className="text-sm sm:text-base md:text-lg text-text leading-relaxed max-w-2xl">
-                  We collaborate with local reporters and community contributors to document
-                  human rights issues and support advocacy through rigorous journalism.
-                </p>
+                AB Journal amplifies marginalized voices and publishes investigative
+                reporting, first-person accounts, and multimedia stories from communities.
+              </p>
+              <p className="text-sm sm:text-base md:text-lg text-text leading-relaxed max-w-2xl">
+                We collaborate with local reporters and community contributors to document
+                human rights issues and support advocacy through rigorous journalism.
+              </p>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 3, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.8, delay: 1.8, ease: [0.22, 1, 0.36, 1] }}
               className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4"
             >
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                 <Link
-                  href="/articles"
-                  className="btn-primary text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-3 sm:py-4 inline-block text-center w-full sm:w-auto"
+                  href="/ab-journal"
+                  className="bg-primary text-white px-8 sm:px-10 py-3.5 sm:py-4 rounded-xl font-semibold shadow-lg shadow-primary/25 hover:bg-primary-dark hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 inline-block text-center text-base sm:text-lg lg:text-xl w-full sm:w-auto"
                 >
                   Read My Journal
                 </Link>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                 <Link
                   href="/about"
-                  className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-primary text-primary rounded-md font-medium hover:bg-primary hover:text-white transition-all duration-300 inline-block text-center text-sm sm:text-base lg:text-lg w-full sm:w-auto"
+                  className="px-8 sm:px-10 py-3.5 sm:py-4 border-2 border-primary text-primary rounded-xl font-semibold hover:bg-primary hover:text-white transition-all duration-300 inline-block text-center text-base sm:text-lg lg:text-xl w-full sm:w-auto"
                 >
                   My Story
                 </Link>
@@ -211,31 +210,31 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 1.8, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
             style={!isMobile ? {
               x: mousePosition.x,
               y: mousePosition.y,
             } : {}}
-            className="lg:col-span-5 relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] rounded-2xl overflow-hidden shadow-2xl group order-1 lg:order-2 bg-white/50"
+            className="lg:col-span-5 relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] rounded-2xl overflow-hidden shadow-2xl group order-1 lg:order-2 bg-white/50 dark:bg-gray-800/50"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent z-10" />
             <Image
               src="/ab-journal/abjournal.png"
               alt="AB Journal"
               fill
-              className="object-contain p-4 sm:p-6 md:p-8 transition-transform duration-700 group-hover:scale-110"
+              className="object-contain p-4 sm:p-6 md:p-8 transition-transform duration-700 group-hover:scale-105"
               priority
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
             />
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2.5, duration: 1 }}
-              className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-4 sm:left-6 md:left-8 right-4 sm:right-6 md:right-8 z-20 text-primary bg-white/90 rounded-lg p-2 sm:p-3"
-              style={{ WebkitBackdropFilter: "blur(4px)", backdropFilter: "blur(4px)" }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.6, duration: 0.8 }}
+              className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-4 sm:left-6 md:left-8 right-4 sm:right-6 md:right-8 z-20 text-primary bg-white/95 dark:bg-gray-800/95 rounded-xl p-3 sm:p-4 shadow-lg"
+              style={{ WebkitBackdropFilter: "blur(8px)", backdropFilter: "blur(8px)" }}
             >
-              <p className="text-xs sm:text-sm font-medium mb-0.5 sm:mb-1">Social Work Undergraduate</p>
-              <p className="text-[10px] sm:text-xs opacity-80">Community Development & Advocacy</p>
+              <p className="text-sm sm:text-base font-semibold mb-0.5 sm:mb-1">Be Your Best Version Of Your Life</p>
+              <p className="text-xs sm:text-sm opacity-70">Community Development & Advocacy</p>
             </motion.div>
           </motion.div>
         </div>

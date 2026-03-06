@@ -95,16 +95,17 @@ export default function HeroMobile() {
       };
 
   return (
-    <section className="relative min-h-[85vh] md:min-h-screen flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16 md:py-20 bg-background">
+    <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center px-4 sm:px-6 py-16 sm:py-20 md:py-24 bg-background">
       {/* Soft card container - mobile-first design */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className="relative w-full max-w-md mx-auto"
+        style={{ opacity: 1 }} /* Chrome hydration fix */
       >
         {/* Card with paper-style design */}
-        <div className="relative bg-white dark:bg-gray-800 rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-xl p-6 sm:p-8 md:p-10 overflow-hidden">
+        <div className="relative bg-white dark:bg-gray-800 rounded-3xl shadow-xl shadow-primary/5 p-7 sm:p-9 md:p-11 overflow-hidden border border-gray-100 dark:border-gray-700">
           {/* Decorative accent */}
           <DecorativeAccent />
 
@@ -144,36 +145,36 @@ export default function HeroMobile() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary leading-tight"
+              className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-primary leading-tight tracking-tight"
             >
               <AnimatedText text="AB Journal" delay={0.5} />
             </motion.h1>
 
-            {/* Role line */}
-              <motion.div
+            {/* Role line - enhanced with modern styling */}
+            <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.9 }}
-              className="flex items-center justify-center gap-2 text-sm sm:text-base md:text-lg text-text font-medium"
+              className="flex items-center justify-center flex-wrap gap-1.5 sm:gap-2 text-sm sm:text-base md:text-lg font-medium px-2"
             >
-              <span>Community Journalism</span>
-              <span className="text-accent">•</span>
-              <span>Human Rights Reporting</span>
+              <span className="text-accent font-semibold">Community Journalism</span>
+              <span className="text-accent/60 text-base sm:text-lg">•</span>
+              <span className="text-primary font-semibold">Human Rights Reporting</span>
             </motion.div>
 
             {/* Mission statement */}
-              <motion.p
+            <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.2 }}
               className="text-base sm:text-lg md:text-xl text-text-light leading-relaxed max-w-sm mx-auto font-light px-2"
             >
-              AB Journal amplifies community voices and publishes investigative
-              journalism that documents human rights issues and local struggles.
+              Amplifying community voices and publishing investigative journalism
+              that documents human rights issues and local struggles.
             </motion.p>
           </div>
 
-          {/* Action Buttons */}
+          {/* Action Buttons - modernized */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -186,8 +187,8 @@ export default function HeroMobile() {
               whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
             >
               <Link
-                href="/articles"
-                className="block w-full bg-primary text-white px-6 py-3.5 sm:py-4 rounded-lg font-medium text-base sm:text-lg text-center hover:bg-primary-dark transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 active:bg-primary-dark"
+                href="/ab-journal"
+                className="block w-full bg-primary text-white px-6 py-3.5 sm:py-4 rounded-xl font-semibold text-base sm:text-lg text-center shadow-lg shadow-primary/20 hover:bg-primary-dark hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 active:bg-primary-dark"
               >
                 View Journal
               </Link>
@@ -200,9 +201,9 @@ export default function HeroMobile() {
             >
               <Link
                 href="/about"
-                className="block w-full border-2 border-primary text-primary px-6 py-3.5 sm:py-4 rounded-lg font-medium text-base sm:text-lg text-center hover:bg-primary hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 active:bg-primary active:text-white"
+                className="block w-full border-2 border-primary text-primary px-6 py-3.5 sm:py-4 rounded-xl font-semibold text-base sm:text-lg text-center hover:bg-primary hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 active:bg-primary active:text-white"
               >
-                About the Journal
+                Learn About Us
               </Link>
             </motion.div>
           </motion.div>
