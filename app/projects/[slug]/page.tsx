@@ -5,25 +5,27 @@ import { formatDate } from "@/lib/utils";
 import ShareButtons from "@/components/ShareButtons";
 import ProjectGallery from "@/components/ProjectGallery";
 
+export const revalidate = 60;
+
 export async function generateStaticParams() {
-  const projects = getAllProjects();
+  const projects = await getAllProjects();
   return projects.map((project) => ({
     slug: project.slug,
   }));
 }
 
-export default function ProjectPage({
+export default async function ProjectPage({
   params,
 }: {
   params: { slug: string };
 }) {
-  const project = getProjectBySlug(params.slug);
+  const project = await getProjectBySlug(params.slug);
 
   if (!project) {
     notFound();
   }
 
-  const contentSections = project.content.split(/\n\n/);
+  const contentSections = (project.content || "").split(/\n\n/);
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -54,15 +56,17 @@ export default function ProjectPage({
         </header>
 
         {/* Hero Image */}
-        <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden mb-12">
-          <Image
-            src={project.heroImage}
-            alt={project.title}
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
+        {project.hero_image && (
+          <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden mb-12">
+            <Image
+              src={project.hero_image}
+              alt={project.title}
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        )}
 
         {/* Excerpt */}
         <div className="prose max-w-none mb-12">

@@ -150,7 +150,7 @@ export default function Hero() {
               >
                 Welcome
               </motion.p>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-serif font-bold text-primary leading-[1.1] sm:leading-[0.95] tracking-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-serif font-bold text-primary leading-[1.08] sm:leading-[1.02] tracking-tight">
                 <AnimatedText text="AB Journal" delay={0.6} />
                 <br className="hidden sm:block" />
                 <motion.span
@@ -231,7 +231,8 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 2.5, duration: 1 }}
-              className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-4 sm:left-6 md:left-8 right-4 sm:right-6 md:right-8 z-20 text-primary bg-white/90 backdrop-blur-sm rounded-lg p-2 sm:p-3"
+              className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-4 sm:left-6 md:left-8 right-4 sm:right-6 md:right-8 z-20 text-primary bg-white/90 rounded-lg p-2 sm:p-3"
+              style={{ WebkitBackdropFilter: "blur(4px)", backdropFilter: "blur(4px)" }}
             >
               <p className="text-xs sm:text-sm font-medium mb-0.5 sm:mb-1">Social Work Undergraduate</p>
               <p className="text-[10px] sm:text-xs opacity-80">Community Development & Advocacy</p>

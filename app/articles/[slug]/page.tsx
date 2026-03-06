@@ -6,27 +6,31 @@ import ShareButtons from "@/components/ShareButtons";
 import RecentArticles from "@/components/RecentArticles";
 import ArticleGallery from "@/components/ArticleGallery";
 
+export const revalidate = 60;
+
 export async function generateStaticParams() {
-  const articles = getAllArticles();
+  const articles = await getAllArticles();
   return articles.map((article) => ({
     slug: article.slug,
   }));
 }
 
-export default function ArticlePage({
+export default async function ArticlePage({
   params,
 }: {
   params: { slug: string };
 }) {
-  const article = getArticleBySlug(params.slug);
+  const [article, allArticles] = await Promise.all([
+    getArticleBySlug(params.slug),
+    getAllArticles(),
+  ]);
 
   if (!article) {
     notFound();
   }
 
   // Parse content for sections
-  const contentSections = article.content.split(/\n\n/);
-  const journalImages = article.images || [];
+  const contentSections = (article.content || "").split(/\n\n/);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -45,26 +49,12 @@ export default function ArticlePage({
             </h1>
             <div className="flex flex-wrap items-center gap-4 text-text mb-6">
               <span>
-                {formatDate(article.date)} · {article.readingTime} min read
+                {formatDate(article.date)} · {article.reading_time} min read
               </span>
-              {article.location && (
+              {article.author_name && (
                 <>
                   <span>•</span>
-                  <span className="flex items-center gap-2">
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    {article.location}
-                  </span>
+                  <span>{article.author_name}</span>
                 </>
               )}
             </div>
@@ -81,20 +71,21 @@ export default function ArticlePage({
           </header>
 
           {/* Hero Image */}
-          <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden mb-12">
-            <Image
-              src={article.heroImage}
-              alt={article.title}
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
+          {article.hero_image && (
+            <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden mb-12">
+              <Image
+                src={article.hero_image}
+                alt={article.title}
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          )}
 
           {/* Content */}
           <div className="prose max-w-none">
             {contentSections.map((section, index) => {
-              // Regular content
               if (section.startsWith("## ")) {
                 const text = section.replace("## ", "");
                 return (
@@ -128,14 +119,6 @@ export default function ArticlePage({
             })}
           </div>
 
-          {/* Image Gallery */}
-          {journalImages.length > 1 && (
-            <ArticleGallery
-              images={journalImages.slice(1)}
-              articleTitle={article.title}
-            />
-          )}
-
           {/* Share Buttons */}
           <div className="mt-12 pt-8 border-t border-gray-200">
             <ShareButtons
@@ -148,7 +131,7 @@ export default function ArticlePage({
         {/* Sidebar */}
         <aside className="lg:col-span-4">
           <div className="sticky top-24 space-y-8">
-            <RecentArticles currentSlug={article.slug} />
+            <RecentArticles currentSlug={article.slug} articles={allArticles} />
           </div>
         </aside>
       </article>

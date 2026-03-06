@@ -79,11 +79,15 @@ export default function Footer() {
 
           <div>
             <h4 className="font-semibold mb-4">Initiatives</h4>
-            <ul className="space-y-2 text-sm text-gray-300">
-              <li>Little Food Cabinet</li>
-              <li>AB Journal</li>
-              <li>Sri Lanka Greens</li>
-              <li>Jana Sabha</li>
+            <ul className="space-y-2 text-sm">
+              <li className="text-gray-300">Little Food Cabinet</li>
+              <li>
+                <Link href="/ab-journal" className="text-gray-300 hover:text-white transition-colors">
+                  AB Journal
+                </Link>
+              </li>
+              <li className="text-gray-300">Sri Lanka Greens</li>
+              <li className="text-gray-300">Jana Sabha</li>
             </ul>
           </div>
         </div>

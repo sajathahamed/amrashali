@@ -2,17 +2,22 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { getAllArticles } from "@/lib/data";
 import { formatDate } from "@/lib/utils";
-import type { Article } from "@/lib/data";
+
+interface RecentArticleItem {
+  id: string;
+  slug: string;
+  title: string;
+  date: string;
+}
 
 interface RecentArticlesProps {
   currentSlug: string;
+  articles: RecentArticleItem[];
 }
 
-export default function RecentArticles({ currentSlug }: RecentArticlesProps) {
-  const allArticles = getAllArticles();
-  const recentArticles = allArticles
+export default function RecentArticles({ currentSlug, articles }: RecentArticlesProps) {
+  const recentArticles = articles
     .filter((article) => article.slug !== currentSlug)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 5);

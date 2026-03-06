@@ -98,7 +98,43 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+    /* Fallback for browsers that don't support text-wrap: balance */
+    @supports not (text-wrap: balance) {
+      text-wrap: pretty;
+    }
   }
+}
+
+/* Cross-browser backdrop-filter fix (Chrome needs -webkit- prefix) */
+@layer utilities {
+  .backdrop-blur-sm {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+  .backdrop-blur-xl {
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+  }
+  .backdrop-blur-md {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+}
+
+/* Ensure Framer Motion animated elements remain visible after hydration in Chrome */
+[style*="opacity"] {
+  will-change: opacity, transform;
+}
+
+/* Chrome-specific fix: prevent invisible elements from staying hidden */
+main {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Ensure all sections are visible - Chrome may not trigger intersection observer same as Edge */
+section {
+  content-visibility: auto;
 }
 
 /* Reduced motion support */

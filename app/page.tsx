@@ -4,9 +4,13 @@ import HeroMobile from "@/components/HeroMobile";
 import FeaturedArticles from "@/components/FeaturedArticles";
 import FeaturedProjects from "@/components/FeaturedProjects";
 
-export default function Home() {
-  const featuredArticles = getFeaturedArticles();
-  const featuredProjects = getFeaturedProjects();
+export const revalidate = 60;
+
+export default async function Home() {
+  const [featuredArticles, featuredProjects] = await Promise.all([
+    getFeaturedArticles(),
+    getFeaturedProjects(),
+  ]);
 
   return (
     <div>

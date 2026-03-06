@@ -31,7 +31,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             className="absolute inset-0 transform-gpu transition-transform will-change-transform"
           >
             <Image
-              src={project.heroImage}
+              src={project.hero_image || "/ab-journal/abjournal.png"}
               alt={project.title}
               fill
               className="object-cover"

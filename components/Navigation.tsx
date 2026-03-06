@@ -94,7 +94,7 @@ export default function Navigation() {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/articles", label: "Journal" },
+    { href: "/ab-journal", label: "Journal" },
     { href: "/projects", label: "Projects" },
     { href: "/about", label: "About" },
   ];
@@ -106,8 +106,9 @@ export default function Navigation() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-white dark:bg-gray-900 shadow-md"
-          : "bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm"
+          : "bg-white/95 dark:bg-gray-900/95"
       }`}
+      style={!isScrolled ? { WebkitBackdropFilter: "blur(4px)", backdropFilter: "blur(4px)" } : {}}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -210,7 +211,8 @@ export default function Navigation() {
               exit={{ opacity: 0 }}
               transition={{ duration: shouldReduceMotion ? 0.1 : 0.3, ease: [0.22, 1, 0.36, 1] }}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="md:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+              className="md:hidden fixed inset-0 bg-black/60 z-40"
+              style={{ WebkitBackdropFilter: "blur(4px)", backdropFilter: "blur(4px)" }}
               aria-hidden="true"
             />
 
@@ -227,7 +229,10 @@ export default function Navigation() {
               aria-label="Navigation menu"
             >
               {/* Decorative background gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/98 to-primary/5 dark:from-gray-900/95 dark:via-gray-900/98 dark:to-primary/10 backdrop-blur-xl" />
+              <div
+                className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/98 to-primary/5 dark:from-gray-900/95 dark:via-gray-900/98 dark:to-primary/10"
+                style={{ WebkitBackdropFilter: "blur(24px)", backdropFilter: "blur(24px)" }}
+              />
               
               {/* Animated gradient blob */}
               {!shouldReduceMotion && (

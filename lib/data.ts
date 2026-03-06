@@ -1,147 +1,176 @@
-import journalData from "@/data/journal.json";
-import projectsData from "@/data/projects.json";
-import servicesData from "@/data/services.json";
-import cvData from "@/data/cv.json";
+import { createServerSupabaseClient } from "@/lib/supabaseClient";
+import type {
+  Article,
+  Project,
+  Service,
+  CVData,
+  CVContact,
+  CVEducation,
+  CVExperience,
+  CVCommunityWork,
+  CVSkill,
+  CVLanguage,
+  CVCertification,
+} from "@/types/journal";
 
-export interface Article {
-  id: string;
-  title: string;
-  slug: string;
-  date: string;
-  category: string;
-  tags: string[];
-  excerpt: string;
-  heroImage: string;
-  images?: string[];
-  location?: string;
-  readingTime: number;
-  content: string;
+// Re-export types so existing imports from "@/lib/data" keep working
+export type { Article, Project, Service };
+export type Education = CVEducation;
+export type Experience = CVExperience;
+export type CommunityWork = CVCommunityWork;
+export type Skill = CVSkill;
+export type Language = CVLanguage;
+export type Certification = CVCertification;
+export type { CVData };
+
+// ─── Articles ────────────────────────────────────────────────
+
+export async function getAllArticles(): Promise<Article[]> {
+  const sb = createServerSupabaseClient();
+  const { data, error } = await sb
+    .from("articles")
+    .select("*")
+    .eq("published", true)
+    .order("date", { ascending: false });
+  if (error) {
+    console.error("getAllArticles error:", error.message);
+    return [];
+  }
+  return data as Article[];
 }
 
-export interface Project {
-  id: string;
-  title: string;
-  slug: string;
-  date: string;
-  category: string;
-  tags: string[];
-  excerpt: string;
-  heroImage: string;
-  featured: boolean;
-  content: string;
-  images?: string[];
+export async function getArticleBySlug(
+  slug: string
+): Promise<Article | null> {
+  const sb = createServerSupabaseClient();
+  const { data, error } = await sb
+    .from("articles")
+    .select("*")
+    .eq("slug", slug)
+    .single();
+  if (error) return null;
+  return data as Article;
 }
 
-export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  icon: string;
+export async function getFeaturedArticles(): Promise<Article[]> {
+  const sb = createServerSupabaseClient();
+  const { data, error } = await sb
+    .from("articles")
+    .select("*")
+    .eq("published", true)
+    .order("date", { ascending: false })
+    .limit(3);
+  if (error) {
+    console.error("getFeaturedArticles error:", error.message);
+    return [];
+  }
+  return data as Article[];
 }
 
-export function getAllArticles(): Article[] {
-  return journalData as Article[];
-}
-
-export function getArticleBySlug(slug: string): Article | undefined {
-  return (journalData as Article[]).find((article) => article.slug === slug);
-}
-
-export function getFeaturedArticles(): Article[] {
-  return (journalData as Article[])
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 3);
-}
-
-export function getAllProjects(): Project[] {
-  return projectsData as Project[];
-}
-
-export function getProjectBySlug(slug: string): Project | undefined {
-  return (projectsData as Project[]).find((project) => project.slug === slug);
-}
-
-export function getFeaturedProjects(): Project[] {
-  return (projectsData as Project[]).filter((project) => project.featured);
-}
-
-export function getAllServices(): Service[] {
-  return servicesData as Service[];
-}
-
-export function getCategories(): string[] {
-  const categories = new Set<string>();
-  (journalData as Article[]).forEach((article) => {
-    categories.add(article.category);
+export async function getCategories(): Promise<string[]> {
+  const articles = await getAllArticles();
+  const cats = new Set<string>();
+  articles.forEach((a) => {
+    if (a.category) cats.add(a.category);
   });
-  return Array.from(categories).sort();
+  return Array.from(cats).sort();
 }
 
-export function getTags(): string[] {
+export async function getTags(): Promise<string[]> {
+  const articles = await getAllArticles();
   const tags = new Set<string>();
-  (journalData as Article[]).forEach((article) => {
-    article.tags.forEach((tag) => tags.add(tag));
-  });
+  articles.forEach((a) => a.tags.forEach((t) => tags.add(t)));
   return Array.from(tags).sort();
 }
 
-// CV Data Types
-export interface Education {
-  id: string;
-  degree: string;
-  institution: string;
-  period: string;
-  description: string;
+// ─── Projects ────────────────────────────────────────────────
+
+export async function getAllProjects(): Promise<Project[]> {
+  const sb = createServerSupabaseClient();
+  const { data, error } = await sb
+    .from("projects")
+    .select("*")
+    .eq("published", true)
+    .order("date", { ascending: false });
+  if (error) {
+    console.error("getAllProjects error:", error.message);
+    return [];
+  }
+  return data as Project[];
 }
 
-export interface Experience {
-  id: string;
-  title: string;
-  organization: string;
-  period: string;
-  responsibilities: string[];
+export async function getProjectBySlug(
+  slug: string
+): Promise<Project | null> {
+  const sb = createServerSupabaseClient();
+  const { data, error } = await sb
+    .from("projects")
+    .select("*")
+    .eq("slug", slug)
+    .single();
+  if (error) return null;
+  return data as Project;
 }
 
-export interface CommunityWork {
-  id: string;
-  title: string;
-  organization: string;
-  period: string;
-  description: string;
+export async function getFeaturedProjects(): Promise<Project[]> {
+  const sb = createServerSupabaseClient();
+  const { data, error } = await sb
+    .from("projects")
+    .select("*")
+    .eq("published", true)
+    .eq("featured", true)
+    .order("date", { ascending: false });
+  if (error) {
+    console.error("getFeaturedProjects error:", error.message);
+    return [];
+  }
+  return data as Project[];
 }
 
-export interface Skill {
-  name: string;
-  level: number;
+// ─── Services ────────────────────────────────────────────────
+
+export async function getAllServices(): Promise<Service[]> {
+  const sb = createServerSupabaseClient();
+  const { data, error } = await sb
+    .from("services")
+    .select("*")
+    .order("sort_order", { ascending: true });
+  if (error) {
+    console.error("getAllServices error:", error.message);
+    return [];
+  }
+  return data as Service[];
 }
 
-export interface Language {
-  name: string;
-  proficiency: number;
-}
+// ─── CV Data ────────────────────────────────────────────────
 
-export interface Certification {
-  id: string;
-  title: string;
-  issuer: string;
-  year: string;
-}
+export async function getCVData(): Promise<CVData> {
+  const sb = createServerSupabaseClient();
 
-export interface CVData {
-  contact: {
-    phone: string;
-    email: string;
-    address: string;
+  const [contactRes, langRes, eduRes, expRes, cwRes, skillRes, certRes] =
+    await Promise.all([
+      sb.from("cv_contact").select("*").limit(1).single(),
+      sb.from("cv_languages").select("*").order("sort_order"),
+      sb.from("cv_education").select("*").order("sort_order"),
+      sb.from("cv_experience").select("*").order("sort_order"),
+      sb.from("cv_community_work").select("*").order("sort_order"),
+      sb.from("cv_skills").select("*").order("sort_order"),
+      sb.from("cv_certifications").select("*").order("sort_order"),
+    ]);
+
+  return {
+    contact: (contactRes.data as CVContact) || {
+      id: "",
+      phone: "",
+      email: "",
+      address: "",
+    },
+    languages: (langRes.data as CVLanguage[]) || [],
+    education: (eduRes.data as CVEducation[]) || [],
+    experience: (expRes.data as CVExperience[]) || [],
+    communityWork: (cwRes.data as CVCommunityWork[]) || [],
+    skills: (skillRes.data as CVSkill[]) || [],
+    certifications: (certRes.data as CVCertification[]) || [],
   };
-  languages: Language[];
-  education: Education[];
-  experience: Experience[];
-  communityWork: CommunityWork[];
-  skills: Skill[];
-  certifications: Certification[];
-}
-
-export function getCVData(): CVData {
-  return cvData as CVData;
 }
 
