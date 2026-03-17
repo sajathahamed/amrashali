@@ -179,9 +179,9 @@ export async function getCVData(): Promise<CVData> {
 
 export async function getOwnerProfile(): Promise<OwnerProfile> {
   return {
-    name: "Journal Owner",
-    role: "Founder & Editor, AB Journal",
-    bio: "Leading AB Journal with a focus on community-driven reporting, human rights documentation, and advocacy through investigative journalism.",
+    name: "Mohamed Hakeem Mohamed Amras Ali",
+    role: "Social Work Undergraduate",
+    bio: "I am a talented, ambitious and hardworking individual, with broad skills and experience in Social services, social media and leading projects. Furthermore, I am adept at handling multiple tasks on a daily basis competently and at working well under pressure. A key strength is communication; building strong relationships with people in order to deliver the best results.",
     imageUrl: "/ab-journal/profile-removebg-preview.png",
     imageAlt: "Author profile",
     backgroundImageUrl: "/ab-journal/background%20image.jpeg",
