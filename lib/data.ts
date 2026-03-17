@@ -11,6 +11,7 @@ import type {
   CVSkill,
   CVLanguage,
   CVCertification,
+  OwnerProfile,
 } from "@/types/journal";
 
 // Re-export types so existing imports from "@/lib/data" keep working
@@ -21,7 +22,7 @@ export type CommunityWork = CVCommunityWork;
 export type Skill = CVSkill;
 export type Language = CVLanguage;
 export type Certification = CVCertification;
-export type { CVData };
+export type { CVData, OwnerProfile };
 
 // ─── Articles ────────────────────────────────────────────────
 
@@ -171,6 +172,19 @@ export async function getCVData(): Promise<CVData> {
     communityWork: (cwRes.data as CVCommunityWork[]) || [],
     skills: (skillRes.data as CVSkill[]) || [],
     certifications: (certRes.data as CVCertification[]) || [],
+  };
+}
+
+// ─── Owner profile (journal owner – professional info only) ─────
+
+export async function getOwnerProfile(): Promise<OwnerProfile> {
+  return {
+    name: "Journal Owner",
+    role: "Founder & Editor, AB Journal",
+    bio: "Leading AB Journal with a focus on community-driven reporting, human rights documentation, and advocacy through investigative journalism.",
+    imageUrl: "/ab-journal/profile-removebg-preview.png",
+    imageAlt: "Author profile",
+    backgroundImageUrl: "/ab-journal/background%20image.jpeg",
   };
 }
 

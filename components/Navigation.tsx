@@ -97,6 +97,7 @@ export default function Navigation() {
     { href: "/ab-journal", label: "Journal" },
     { href: "/projects", label: "Projects" },
     { href: "/about", label: "About" },
+    { href: "/owner", label: "About the Author" },
   ];
 
   return (

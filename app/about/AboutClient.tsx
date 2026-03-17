@@ -3,12 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
-import EducationTimeline from "@/components/EducationTimeline";
-import ExperienceCard from "@/components/ExperienceCard";
-import CommunityWorkCard from "@/components/CommunityWorkCard";
-import SkillsSection from "@/components/SkillsSection";
-import LanguagesSection from "@/components/LanguagesSection";
-import type { CVData } from "@/types/journal";
+import Link from "next/link";
 
 const ScrollReveal = ({
   children,
@@ -33,7 +28,7 @@ const ScrollReveal = ({
   );
 };
 
-export default function AboutClient({ cvData }: { cvData: CVData }) {
+export default function AboutClient() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -130,15 +125,15 @@ export default function AboutClient({ cvData }: { cvData: CVData }) {
         </div>
       </section>
 
-      {/* Editorial Content */}
+      {/* Editorial Content - Journal only */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 space-y-16 sm:space-y-24 lg:space-y-32">
-        {/* My Journey */}
+        {/* Our Story */}
         <ScrollReveal>
           <section className="space-y-8">
-              <div className="flex items-center gap-4 mb-12">
+            <div className="flex items-center gap-4 mb-12">
               <div className="h-px bg-accent flex-1" />
               <span className="text-accent text-sm font-medium tracking-wider uppercase">
-                  Our Story
+                Our Story
               </span>
               <div className="h-px bg-accent flex-1" />
             </div>
@@ -162,186 +157,25 @@ export default function AboutClient({ cvData }: { cvData: CVData }) {
           </section>
         </ScrollReveal>
 
-        {/* Education */}
+        {/* Visit Journal */}
         <ScrollReveal delay={0.1}>
-          <section className="space-y-8">
-            <div className="flex items-center gap-4 mb-12">
-              <div className="h-px bg-accent flex-1" />
-              <span className="text-accent text-sm font-medium tracking-wider uppercase">
-                Education
-              </span>
-              <div className="h-px bg-accent flex-1" />
-            </div>
-            <EducationTimeline education={cvData.education} />
-          </section>
-        </ScrollReveal>
-
-        {/* Experience */}
-        <ScrollReveal delay={0.15}>
-          <section className="space-y-8">
-            <div className="flex items-center gap-4 mb-12">
-              <div className="h-px bg-accent flex-1" />
-              <span className="text-accent text-sm font-medium tracking-wider uppercase">
-                Professional Experience
-              </span>
-              <div className="h-px bg-accent flex-1" />
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-              {cvData.experience.map((exp, index) => (
-                <ExperienceCard key={exp.id} experience={exp} index={index} />
-              ))}
-            </div>
-          </section>
-        </ScrollReveal>
-
-        {/* Community & Social Work */}
-        <ScrollReveal delay={0.2}>
-          <section className="space-y-8">
-            <div className="flex items-center gap-4 mb-12">
-              <div className="h-px bg-accent flex-1" />
-              <span className="text-accent text-sm font-medium tracking-wider uppercase">
-                Community & Social Work
-              </span>
-              <div className="h-px bg-accent flex-1" />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-              {cvData.communityWork.map((work, index) => (
-                <CommunityWorkCard key={work.id} work={work} index={index} />
-              ))}
-            </div>
-          </section>
-        </ScrollReveal>
-
-        {/* Skills */}
-        <ScrollReveal delay={0.25}>
-          <section className="space-y-8">
-            <div className="flex items-center gap-4 mb-12">
-              <div className="h-px bg-accent flex-1" />
-              <span className="text-accent text-sm font-medium tracking-wider uppercase">
-                Skills & Expertise
-              </span>
-              <div className="h-px bg-accent flex-1" />
-            </div>
-            <SkillsSection skills={cvData.skills} />
-          </section>
-        </ScrollReveal>
-
-        {/* Languages */}
-        <ScrollReveal delay={0.3}>
-          <section className="space-y-8">
-            <div className="flex items-center gap-4 mb-12">
-              <div className="h-px bg-accent flex-1" />
-              <span className="text-accent text-sm font-medium tracking-wider uppercase">
-                Languages
-              </span>
-              <div className="h-px bg-accent flex-1" />
-            </div>
-            <LanguagesSection languages={cvData.languages} />
-          </section>
-        </ScrollReveal>
-
-        {/* Certifications */}
-        {cvData.certifications.length > 0 && (
-          <ScrollReveal delay={0.35}>
-            <section className="space-y-8">
-              <div className="flex items-center gap-4 mb-12">
-                <div className="h-px bg-accent flex-1" />
-                <span className="text-accent text-sm font-medium tracking-wider uppercase">
-                  Certifications
-                </span>
-                <div className="h-px bg-accent flex-1" />
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
-                {cvData.certifications.map((cert, index) => (
-                  <motion.div
-                    key={cert.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="card p-6 sm:p-8"
-                  >
-                    <h3 className="text-xl sm:text-2xl font-serif font-bold text-primary mb-2">
-                      {cert.title}
-                    </h3>
-                    <p className="text-base sm:text-lg text-accent font-medium mb-1">
-                      {cert.issuer}
-                    </p>
-                    <p className="text-sm sm:text-base text-text">{cert.year}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </section>
-          </ScrollReveal>
-        )}
-
-        {/* Download CV */}
-        <ScrollReveal delay={0.4}>
           <section className="space-y-8 text-center">
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <a
-                href="/articles"
+              <Link
+                href="/ab-journal"
                 className="btn-primary text-lg px-10 py-4 inline-block"
               >
                 Visit Journal
-              </a>
+              </Link>
             </motion.div>
           </section>
         </ScrollReveal>
 
-        {/* My Values */}
-        <ScrollReveal delay={0.5}>
-          <section className="space-y-12">
-            <div className="flex items-center gap-4 mb-12">
-              <div className="h-px bg-accent flex-1" />
-              <span className="text-accent text-sm font-medium tracking-wider uppercase">
-                My Values
-              </span>
-              <div className="h-px bg-accent flex-1" />
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-              {[
-                {
-                  title: "Community",
-                  description:
-                    "I believe in empowering communities through engagement, participation, and sustainable practices that create lasting change.",
-                },
-                {
-                  title: "Sustainability",
-                  description:
-                    "Environmental conservation and green social work are integral to creating a better future for all.",
-                },
-                {
-                  title: "Advocacy",
-                  description:
-                    "I advocate for accessibility, inclusion, and equal rights, ensuring that all voices are heard and valued.",
-                },
-              ].map((value, index) => (
-                <motion.div
-                  key={value.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="space-y-4"
-                >
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary">
-                    {value.title}
-                  </h3>
-                  <p className="text-base sm:text-lg text-text-light leading-relaxed">
-                    {value.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </section>
-        </ScrollReveal>
-
         {/* Connect Section */}
-        <ScrollReveal delay={0.4}>
+        <ScrollReveal delay={0.2}>
           <section id="connect" className="space-y-12">
             <div className="flex items-center gap-4 mb-12">
               <div className="h-px bg-accent flex-1" />

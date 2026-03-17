@@ -143,3 +143,13 @@ export interface CVData {
   skills: CVSkill[];
   certifications: CVCertification[];
 }
+
+export interface OwnerProfile {
+  name: string;
+  role: string;
+  bio: string;
+  imageUrl: string;
+  imageAlt?: string;
+  /** Card/hero background image (e.g. banner behind author section) */
+  backgroundImageUrl?: string;
+}
